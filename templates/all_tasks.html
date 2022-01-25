@@ -1,0 +1,17 @@
+<h1>Pending Tasks</h1>
+{%if not pending%}
+There are no pending tasks...
+{%else%}
+{% for task in pending %}
+{{forloop.counter}}. {{task}} <br>
+{% endfor %}
+{%endif%}
+
+<h1>Completed Tasks</h1>
+{%if not completed%}
+There are no completed tasks...
+{%else%}
+{% for task in completed %}
+{{forloop.counter}}. {{task}} <br>
+{% endfor %}
+{%endif%}
